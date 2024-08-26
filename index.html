@@ -165,7 +165,6 @@
         }
 
         function processOrder() {
-            // Get form values
             const name = document.getElementById('name').value.trim();
             const mobile = document.getElementById('mobile').value.trim();
             const size = document.getElementById('size').value;
@@ -174,13 +173,12 @@
             const deliveryMethod = document.getElementById('deliveryMethod').value;
             const deliveryDate = document.getElementById('deliveryDate').value;
 
-            // Validate mobile number
+         
             if (!validateMobileNumber(mobile)) {
                 alert('Please enter a valid 9-digit mobile number.');
                 return;
             }
 
-            // Generate receipt
             const receiptDiv = document.getElementById('receipt');
             const date = new Date();
             const formattedDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
